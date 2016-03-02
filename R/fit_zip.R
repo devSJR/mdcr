@@ -12,6 +12,7 @@
 #' @keywords models
 #' @export
 #' @importFrom pscl zeroinfl
+#' @importFrom stats glm poisson
 
 fit_zip <- function(x) {
   CP <- summary(glm(x ~ 1, family = poisson(link = "log")))
